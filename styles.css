@@ -42,8 +42,7 @@ body {
     font-size: 15px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
     text-align: left;
     padding: 30px;
     max-width: 400px;
@@ -55,10 +54,9 @@ body {
     text-align: left;
   }
   
-  /* --- Header styles --- */
+  /* --- Star styles --- */
 
   .star-container {
-    flex: 1;
     background-color: var(--mediumGrey);
     cursor: pointer;
     height: 50px;
@@ -77,11 +75,6 @@ body {
     margin-bottom: 20px;
   }
 
-  header h1 {
-    margin-top: 20px;
-    font-weight: 700;
-  }
-
   /* --- Ratings styles --- */
 
   .ratings-container {
@@ -89,10 +82,15 @@ body {
     justify-content: space-around;
     margin: 20px 0;
     width: 100%;
+    border: none;
   }
   
+  .ratings-control {
+    position: relative;
+  }
+
   .rating {
-    flex: 1;
+    appearance: none;
     background-color: var(--mediumGrey);
     cursor: pointer;
     height: 50px;
@@ -100,6 +98,14 @@ body {
     border-radius: 50%;
     margin: 10px 8px;
     position: relative;
+  }
+
+  label {
+    position: absolute;
+    color: var(--White);
+    top: 38%;
+    left: 46%;
+    z-index: 0;
   }
   
   .rating:hover {
@@ -109,15 +115,11 @@ body {
     color: var(--White);
   }
 
-  .rating.active {
+  .rating:checked {
     border-radius: 50%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: var(--lightGrey);
     color: var(--White);
-  }
-
-  .rating img {
-    width: 40px;
   }
 
   .rating p {
@@ -157,10 +159,22 @@ body {
 
   /* --- Thank you panel style --- */
 
+  img {
+    height: 200px;
+    width: 250px;
+    align-self: center;
+  }
+
   #thank-you {
     background-color: var(--mediumGrey);
     color: var(--Orange);
     border-radius: 10px;
     padding: 6px 10px;
     margin: 20px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  #text-align {
+    text-align: center;
   }
