@@ -12,35 +12,41 @@
 
 </head>
 <body>
-
-  <div id="panel" class="panel-container">
-    <header>
-      <div class="star-container">
-        <i class="fa-solid fa-star"></i>
-      </div>
-      <h1>How did we do?</h1><br/>
-      <p>Please let us know how we did with your support request. All feedback is appreciated 
-        to help us improve our offering!</p>
-    </header>
-    <div class="ratings-container">
-      <div class="rating">
-        <p>1</p>
-      </div>
-      <div class="rating">
-        <p>2</p>
-      </div>
-      <div class="rating">
-        <p>3</p>
-      </div>
-      <div class="rating">
-        <p>4</p>
-      </div>
-      <div class="rating">
-        <p>5</p>
-      </div>
+  <main id="panel" class="panel-container">
+    <div class="star-container">
+      <i class="fa-solid fa-star"></i>
     </div>
-    <button type="submit" class="btn" id="submit">Submit</button>
-  </div>
+    <h1>How did we do?</h1><br/>
+    <p>Please let us know how we did with your support request. All feedback is appreciated 
+      to help us improve our offering!</p>
+    <form>
+      <fieldset class="ratings-container">
+        <div class="ratings-control">
+          <input type="radio" class="rating" value="1">
+          <label for="ratingChoice1">1</label>
+        </div>
+        <div class="ratings-control">
+          <input type="radio" class="rating" value="2">
+          <label for="ratingChoice2">2</label>
+        </div>
+        <div class="ratings-control">
+          <input type="radio" class="rating" value="3">
+          <label for="ratingChoice3">3</label>
+        </div>
+        <div class="ratings-control">
+          <input type="radio" class="rating" value="4">
+          <label for="ratingChoice4">4</label>
+        </div>
+        <div class="ratings-control">
+          <input type="radio" class="rating" value="5">
+          <label for="ratingChoice5">5</label>
+        </div>
+      </fieldset>
+      </div>
+        <button type="submit" class="btn" id="submit">Submit</button>
+      </div>
+    </form>
+  </main>
   <script src="script.js"></script>
 </body>
 </html>
